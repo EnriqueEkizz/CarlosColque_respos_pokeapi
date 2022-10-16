@@ -51,22 +51,49 @@ const conseguirPokemonPorNombre = async() => {
 }
 
 // ESTABLECER FUNCIONALIDADES DE BUSQUEDA Y RESCATE
-document.getElementById('button_previous_page').addEventListener('click', () => {
-    // ## Determinar Siguiente pagina
-    current_page--;
-    if (current_page > -1) {
+/*
+    document.getElementById('button_previous_page').addEventListener('click', () => {
+        // ## Determinar Siguiente pagina
+        current_page--;
+        if (current_page > -1) {
+            // ## Conseguir y desplegar siguiente pagina
+            conseguirPokemonPorPagina(current_page);
+        } else {
+            current_page = 0;
+        }
+    });
+    document.getElementById('button_next_page').addEventListener('click', () => {
+        // ## Determinar Siguiente pagina
+        current_page++;
         // ## Conseguir y desplegar siguiente pagina
         conseguirPokemonPorPagina(current_page);
-    } else {
-        current_page = 0;
-    }
+    });
+*/
+
+// ESTABLECER FUNCIONALIDADES DE BUSQUEDA Y RESCATE
+// ## Botones anterior y siguiente
+let btnprevious = document.getElementsByClassName('button_previous_page');
+Array.from(btnprevious).forEach(element => {
+    element.addEventListener('click', () => {
+        current_page--;
+        if (current_page > -1) {
+            // ## Conseguir y desplegar siguiente pagina
+            conseguirPokemonPorPagina(current_page);
+        } else {
+            current_page = 0;
+        }
+    });
 });
-document.getElementById('button_next_page').addEventListener('click', () => {
-    // ## Determinar Siguiente pagina
-    current_page++;
-    // ## Conseguir y desplegar siguiente pagina
-    conseguirPokemonPorPagina(current_page);
+let btnnext = document.getElementsByClassName('button_next_page');
+Array.from(btnnext).forEach(element => {
+    element.addEventListener('click', () => {
+        // ## Determinar Siguiente pagina
+        current_page++;
+        // ## Conseguir y desplegar siguiente pagina
+        conseguirPokemonPorPagina(current_page);
+    });
 });
+// ## Input / boton search
 pokemon_search_box.addEventListener('keydown', (e) => {
     if (e.key === "Enter") {
         conseguirPokemonPorNombre();
