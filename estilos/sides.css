@@ -1,0 +1,26 @@
+#sides{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+}
+#side_left{
+    width: 66.6%;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+}
+#side_right{
+    width: 33.3%;
+    transition: 0.3s;
+}
+
+@media only screen and (max-width: 426px) {
+    #side_right {
+        width: 0%;
+    }
+    #side_left {
+        width: 100%;
+    }
+}

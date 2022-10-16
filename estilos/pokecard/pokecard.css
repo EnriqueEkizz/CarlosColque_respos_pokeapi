@@ -1,0 +1,94 @@
+#pokecard{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    transition: 0.3s;
+    pointer-events: none;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    overflow: auto;
+    padding: 0.75rem;
+}
+.pokecard_actions{
+    display: none;
+}
+#pokecard_imagen{
+    display: block;
+    margin: auto;
+    width: 50%;
+    height: auto;
+}
+
+/* ATRIBUTOS */
+.pokecard_atributos{
+    margin-bottom: 1rem;
+    border-radius: 0.75rem;
+    padding: 1rem;
+    background-color: white;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+}
+.pokecard_atributos_content{
+    width: 100%;
+}
+.pokecard_atributos_nombre{
+    font-weight: bold;
+    margin: 0 1rem 1rem 0;
+}
+.pokecard_atributos_nombre-centered{
+    display: block;
+    text-align: center;
+}
+.pokecard_atributos_lista{
+    margin-top: .75rem;
+}
+.pokecard_lista_item{
+    float: left;
+    padding: 0.25rem 1rem;
+    margin: 0 0.5rem 0.5rem 0;
+    border: solid 1px rgba(0,0,0,.25);
+    border-radius: .75rem;
+}
+
+/* SPRITES*/
+.pokecard_atributos_sprites{
+    margin-top: 0.75rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.pokecard_sprite{
+    height: auto;
+    width: 20%;
+}
+.pokecard_sprite img{
+    height: 100%;
+    width: 100%;
+}
+
+
+/* Mostrar pokecard modal*/
+.show_pokecard{
+    opacity: 1 !important;
+    pointer-events: auto !important;
+}
+
+@media only screen and (max-width: 426px) {
+    #pokecard {
+        position: fixed;
+        opacity: 0;
+        left: 50%;
+        top: 0;
+        width: 90%;
+        transform: translateX(-50%);
+    }
+    #closePokecard{
+        margin: 0;
+    }
+    .pokecard_actions{
+        display: block;
+    }
+}
+

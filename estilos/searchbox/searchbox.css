@@ -1,0 +1,45 @@
+.searchbox{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+.searchbox_div{
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    flex: 1;
+}
+.searchbox_input{
+    flex: 1;
+    border-radius: 1rem;
+    border: none;
+    outline: none;
+    padding: 0 1rem;
+    margin-right: 0.75rem;
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0, .15) !important;
+    font-family: 'Montserrat', sans-serif;
+}
+.searchbox-bottom{
+    display: none;
+}
+@media only screen and (max-width: 769px) {
+    .searchbox{
+        flex-direction: column;
+    }
+    .searchbox_div-distributed{
+        padding-top: 0.75rem;
+    }
+    .searchbox_div-distributed .button{
+        flex: 1;
+    }
+    
+}
+@media only screen and (max-width: 426px) {
+    .searchbox-top{
+        display: none;
+    }
+    .searchbox-bottom{
+        display: block;
+    }
+}

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es-PE">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon</title>
+
+    <link rel="stylesheet" href="estilos/sides.css">
+    <link rel="stylesheet" href="estilos/pokecard/pokecard.css">
+    <link rel="stylesheet" href="estilos/pokeitem/pokeitem.css">
+    <link rel="stylesheet" href="estilos/buttons/buttons.css">
+    <link rel="stylesheet" href="estilos/searchbox/searchbox.css">
+
+    <!--Iconos-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <!--Fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="sides">
+
+        <!-- LADO IZQUIERDO / POKEITEMS -->
+        <div id="side_left" class="side">
+            <div class="searchbox">
+                <div class="searchbox_div">
+                    <input id="input_search" class="searchbox_input" type="text" placeholder="Busca tu pokemon">
+                    <button id="button_search" class="button">
+                        <span class="button_icon material-symbols-outlined">search</span>
+                    </button>
+                </div>
+                <div class="searchbox_div searchbox-top searchbox_div-distributed">
+                    <button id="button_previous_page" class="button">
+                        <span class="button_icon material-symbols-outlined">navigate_before</span>
+                        <span class="button_titulo">Atras</span>
+                    </button>
+                    <button id="button_next_page" class="button">
+                        <span class="button_titulo">Siguiente</span>
+                        <span class="button_icon material-symbols-outlined">navigate_next</span>
+                    </button>
+                </div>
+            </div>
+            <div id="pokemon_content">
+                <!--button class="pokeitem">
+                    <div class="pokeitem_imagen"></div>
+                    <div class="pokeitem_id"></div>
+                    <div class="pokeitem_nombre"></div>
+                </button-->
+            </div>
+            <div class="searchbox-bottom">
+                <div class="searchbox_div searchbox_div-distributed">
+                    <button id="button_previous_page" class="button">
+                        <span class="button_icon material-symbols-outlined">navigate_before</span>
+                        <span class="button_titulo">Atras</span>
+                    </button>
+                    <button id="button_next_page" class="button">
+                        <span class="button_titulo">Siguiente</span>
+                        <span class="button_icon material-symbols-outlined">navigate_next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- LADO DERECHO / POKECARD -->
+        <div id="side_right" class="side">
+            <!-- pokecard -->
+            <div id="pokecard">
+                <div class="pokecard_atributos">
+                    <!-- acciones -->
+                    <div class="pokecard_actions">
+                        <button class="button button-blank" id="closePokecard">
+                            <span class="button_icon material-symbols-outlined">close</span>
+                        </button>
+                    </div>
+                    <div class="pokecard_atributos_content">
+                        <img id="pokecard_imagen" src="" alt="">
+                        <span class="pokecard_atributos_nombre pokecard_atributos_nombre-centered" id="pokecard_nombre"></span>
+                    </div>
+                </div>
+                <!-- POKEMON ATRIBUTOS -->
+                <!--div class="pokecard_atributos">
+                    <div class="pokecard_atributos_content">
+                        <span class="pokecard_atributos_nombre">Peso</span>
+                        <span class="pokecard_atributos_descripcion">11kg</span>
+                        <div class="pokecard_atributos_lista">
+                            <p class="pokecard_lista_item">fired</p>
+                        </div>
+                    </div>
+                </div-->
+
+                <div class="pokecard_atributos">
+                    <div class="pokecard_atributos_content">
+                        <span class="pokecard_atributos_nombre">Tipo</span>
+                        <div id="pokecard_types" class="pokecard_atributos_lista">
+                            <!--p class="pokecard_lista_item">fired</p-->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- POKEMON SPRITES-->
+                <div class="pokecard_atributos">
+                    <div class="pokecard_atributos_content">
+                        <span class="pokecard_atributos_nombre">Sprites</span>
+                        <div id="pokecard_sprites" class="pokecard_atributos_sprites">
+                            <!--button class="button button-blank pokecard_sprite">
+                                <img class="sprite" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/6.png" alt="">
+                            </button-->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- POKEMOS MOVES-->
+                <div class="pokecard_atributos">
+                    <div class="pokecard_atributos_content">
+                        <span class="pokecard_atributos_nombre">Movimientos</span>
+                        <div id="pokecard_moves" class="pokecard_atributos_lista">
+                            <!--p class="pokecard_lista_item">fired</p-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="script/modal.js"></script>
+    <script src="script/conexionServicios.js"></script>
+    <script src="script/pokemonServicios.js"></script>
+    <script src="script/index.js"></script>
+</body>
+</html>
