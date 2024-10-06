@@ -24,8 +24,7 @@ const conseguirPokemonPorPagina = async(pPage) => {
     
     // ## Conseguir full data para lista
     let arrDataList = await arrList.map((e) => {
-        e = conServicios.getPokemonByUrl(e.url);
-        return e;
+        return conServicios.getPokemonByUrl(e.url);
     });
     
     // ## Resolver
